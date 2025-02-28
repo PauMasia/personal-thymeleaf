@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class GeneroController {
 
     @Autowired
     TodosGenerosService generoService;
     @GetMapping("/generos")
-    public List<Genero> obtenirGeneros(Model model) {
-//        model.addAttribute("generos", generoRepository.findAll());
-        return (List<Genero>) generoService.getAllGeneros();
+    public String getAllGeneros(Model model) {
+        model.addAttribute("single", generoService.getAllGeneros());
+        return "generos";
     }
 
 }

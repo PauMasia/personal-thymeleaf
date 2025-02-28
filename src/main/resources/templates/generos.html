@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Generos Lista</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre genero</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="s : ${single}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.name}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

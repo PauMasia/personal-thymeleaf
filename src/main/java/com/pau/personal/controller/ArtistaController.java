@@ -18,8 +18,8 @@ public class ArtistaController {
     @Autowired
     TodosArtistaService artistaService;
     @GetMapping("/artistas")
-    public List<Artista> obtenirArtista(Model model) {
-//        model.addAttribute("artista", artistaService.getAllArtista());
-        return (List<Artista>) artistaService.getAllArtista();
+    public String getAllAlbums(Model model) {
+        model.addAttribute("single", artistaService.getAllArtista());
+        return "artista";
     }
 }
