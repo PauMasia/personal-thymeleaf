@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class ArtistaController {
 
     @Autowired
@@ -20,6 +20,6 @@ public class ArtistaController {
     @GetMapping("/artistas")
     public String getAllAlbums(Model model) {
         model.addAttribute("single", artistaService.getAllArtista());
-        return "artista";
+        return "autores";
     }
 }

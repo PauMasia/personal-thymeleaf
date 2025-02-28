@@ -57,6 +57,14 @@ public class Artista {
         return country;
     }
 
+    public String getArtista_Name() {
+        return artista_Name;
+    }
+
+    public String getActual_Image() {
+        return actual_Image;
+    }
+
     public void setCountry(String country) {
         this.country = country;
     }

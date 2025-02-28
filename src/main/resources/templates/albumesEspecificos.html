@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<h1>Autores Lista</h1>
+<h1>Albumes Especificos de </h1>
+<h1 th:text="${txt}"></h1>
 <table>
     <thead>
     <tr>
         <th>ID</th>
-        <th>Nombre autor</th>
-        <th>Pais</th>
+        <th>Albumes</th>
+        <th>Año</th>
+        <th>Ventas</th>
 
     </tr>
     </thead>
@@ -20,7 +22,8 @@
     <tr th:each="s : ${single}">
         <td th:text="${s.id}"></td>
         <td th:text="${s.name}"></td>
-        <td th:text="${s.getCountry()}"></td>
+        <td th:text="${s.getAnyo()}"></td>
+        <td th:text="${s.getSales()}"></td>
 
     </tr>
     </tbody>

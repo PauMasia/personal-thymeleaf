@@ -20,6 +20,7 @@ public class AlbumController {
     AlbumRepository albumRepository;
     @Autowired
     TodosAlbumService albumService;
+    @GetMapping("/albumes")
     public String getAllAlbumes(Model model) {
         model.addAttribute("single", albumService.getAllAlbum());
         return "albumes";
